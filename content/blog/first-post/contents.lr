@@ -1,9 +1,7 @@
 title: Hello Website
 ---
-pub_date: 2016-02-21
+pub_date: 2016-02-20
 ---
 author: Greg Schafer
 ---
-body:
-
-This is an example blog post.  Not much here but that's not the point :)
+body: This is an example blog post.  Not much here but that's not the point :)
