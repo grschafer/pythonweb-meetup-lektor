@@ -2,7 +2,11 @@ title: Trying out lektor
 ---
 author: Greg Schafer
 ---
-body: Testing things out
+body:
+
+Testing things out
+
+![cloud](cloud.png)
 ---
 pub_date: 2016-02-21
 ---
