@@ -15,8 +15,9 @@
     {% endif %}
     on {{ post.pub_date }}
   </p>
-  {% if post.image %}
-    <div class="image"><img src="{% if from_index %}{{ site.get('/blog').url_to(post) }}{% endif %}{{ post.image|url }}"></div>
+  {{post.attachments.images.get('cloud.png')}}
+  {% if post.attachments.images %}
+    <div class="image"><img src="{{ post.attachments.images|first|url }}"></div>
   {% endif %}
   {{ post.body }}
   </div>
