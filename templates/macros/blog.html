@@ -21,3 +21,31 @@
   {{ post.body }}
   </div>
 {% endmacro %}
+
+{% macro render_category_nav(active=none) %}
+  <ul>
+  {% for category in site.query('/blog-categories') %}
+    <li{% if category._id == active %} class="active"{% endif
+      %}><a href="{{ category|url }}">{{ category.name }}</a>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_blog_categories(post) %}
+  <hr>
+  <p>Categories:</p>
+  <ul>
+  {% for category_label in post.categories %}
+    {% set category = site.query('/blog-categories').get(category_label) %}
+    <li><a href="{{ category|url }}">{{ category.name }}</a>
+  {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro render_blogpost_list(blogposts) %}
+  <ul>
+  {% for blogpost in blogposts %}
+    <li><a href="{{ blogpost|url }}">{{ blogpost.title }}</a>
+  {% endfor %}
+  </ul>
+{% endmacro %}
