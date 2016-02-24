@@ -1,1 +1,5 @@
 _model: blog
+---
+navtitle: Blog
+---
+navsort: 400
