@@ -15,7 +15,6 @@
     {% endif %}
     on {{ post.pub_date }}
   </p>
-  {{post.attachments.images.get('cloud.png')}}
   {% if post.attachments.images %}
     <div class="image"><img src="{{ post.attachments.images|first|url }}"></div>
   {% endif %}
